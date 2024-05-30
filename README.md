@@ -60,6 +60,16 @@ Where `FILE_PATH` is a path to a file relative to the client process that will b
 to the current working directory of the server process.
 Basically, copies file from client to server.
 
+##### show
+Usage:
+```
+show [FILE_PATH]
+```
+Where `FILE_PATH` is a path to a file relative to the server process 
+which will be opened and its contents will be streamed
+to the client process stdout using the `more` executable on repeat.
+Basically like the client's `get` command but streams to stdout instead of a new file.
+
 #### Client
 
 ##### cd
