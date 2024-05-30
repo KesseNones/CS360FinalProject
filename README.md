@@ -102,3 +102,7 @@ ls <OPTIONAL_FILE_PATH>
 ```
 Where `OPTIONAL_FILE_PATH` is a directory to list the contents of relative to the client process.
 If no path is provided, the current working directory of the client process will be used for `ls`.
+
+##### exit
+When typed, the client will exit and the server will kill off the process interacting with that client.
+In a nutshell: the graceful way to exit the client and let the server know.
