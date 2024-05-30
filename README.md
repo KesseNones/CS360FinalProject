@@ -43,8 +43,18 @@ and client commands to explore the functionality implemented in this project.
 
 ### Commands
 
-#### Server - Side
+#### Server
 
+##### rcd
+Short for `remote change directory`, used to change the current directory of the server process.
+Used by typing:
+`rcd [RELATIVE_OR_ABSOLUTE_DIR]`
+which changes the server process' directory to `RELATIVE_OR_ABSOLUTE_DIR`.
 
+#### Client
 
-#### Client - Side
+##### cd
+Short for `change directory`, used to change the current directory of the client process.
+Used by typing:
+`cd [RELATIVE_OR_ABSOLUTE_DIR]`
+which changes the client process' directory to `RELATIVE_OR_ABSOLUTE_DIR`.
