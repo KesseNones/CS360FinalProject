@@ -1,6 +1,6 @@
 # CS 360 (Systems Programming) Final Project
 # Jesse Jones
-# Completed mid December 2022
+# Completed mid-December 2022
 
 ## Description
 This was the final project for CS 360 Fall Semester of 2022. It involves a server and client 
@@ -45,13 +45,13 @@ and client commands to explore the functionality implemented in this project.
 
 #### Server
 
-##### rcd
+##### `rcd`
 Short for `remote change directory`, used to change the current directory of the server process.
 Used by typing:
 `rcd [RELATIVE_OR_ABSOLUTE_DIR]`
 which changes the server process' directory to `RELATIVE_OR_ABSOLUTE_DIR`.
 
-##### put
+##### `put`
 Usage:
 ```
 put [FILE_PATH]
@@ -60,7 +60,7 @@ Where `FILE_PATH` is a path to a file relative to the client process that will b
 to the current working directory of the server process.
 Basically, copies file from client to server.
 
-##### show
+##### `show`
 Usage:
 ```
 show [FILE_PATH]
@@ -70,7 +70,7 @@ which will be opened and its contents will be streamed
 to the client process stdout using the `more` executable on repeat.
 Basically like the client's `get` command but streams to stdout instead of a new file.
 
-##### rls
+##### `rls`
 Usage:
 ```
 rls <OPTIONAL_FILE_PATH>
@@ -80,13 +80,13 @@ If no path is provided, the current working directory of the server process will
 
 #### Client
 
-##### cd
+##### `cd`
 Short for `change directory`, used to change the current directory of the client process.
 Used by typing:
 `cd [RELATIVE_OR_ABSOLUTE_DIR]`
 which changes the client process' directory to `RELATIVE_OR_ABSOLUTE_DIR`.
 
-##### get
+##### `get`
 Usage:
 ```
 get [FILE_PATH]
@@ -95,7 +95,7 @@ Where `FILE_PATH` is relative to the server end. When given a valid path, create
 of the client and copies the data of the file in the server path over, effectively copying the file from the directory
 relative to the server process to the current working directory of the given client process.
 
-##### ls
+##### `ls`
 Usage:
 ```
 ls <OPTIONAL_FILE_PATH>
@@ -103,6 +103,6 @@ ls <OPTIONAL_FILE_PATH>
 Where `OPTIONAL_FILE_PATH` is a directory to list the contents of relative to the client process.
 If no path is provided, the current working directory of the client process will be used for `ls`.
 
-##### exit
+##### `exit`
 When typed, the client will exit and the server will kill off the process interacting with that client.
 In a nutshell: the graceful way to exit the client and let the server know.
