@@ -70,6 +70,14 @@ which will be opened and its contents will be streamed
 to the client process stdout using the `more` executable on repeat.
 Basically like the client's `get` command but streams to stdout instead of a new file.
 
+##### rls
+Usage:
+```
+rls <OPTIONAL_FILE_PATH>
+```
+Where `OPTIONAL_FILE_PATH` is a directory to list the contents of relative to the server process.
+If no path is provided, the current working directory of the server process will be used for `rls`.
+
 #### Client
 
 ##### cd
@@ -86,3 +94,11 @@ get [FILE_PATH]
 Where `FILE_PATH` is relative to the server end. When given a valid path, creates a file in the current directory 
 of the client and copies the data of the file in the server path over, effectively copying the file from the directory
 relative to the server process to the current working directory of the given client process.
+
+##### ls
+Usage:
+```
+ls <OPTIONAL_FILE_PATH>
+```
+Where `OPTIONAL_FILE_PATH` is a directory to list the contents of relative to the client process.
+If no path is provided, the current working directory of the client process will be used for `ls`.
