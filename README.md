@@ -43,7 +43,9 @@ and client commands to explore the functionality implemented in this project.
 
 ### Commands
 
-#### Server
+#### **Server**
+
+---
 
 ##### `rcd`
 Short for `remote change directory`, used to change the current directory of the server process.
@@ -78,7 +80,9 @@ rls <OPTIONAL_FILE_PATH>
 Where `OPTIONAL_FILE_PATH` is a directory to list the contents of relative to the server process.
 If no path is provided, the current working directory of the server process will be used for `rls`.
 
-#### Client
+#### **Client**
+
+---
 
 ##### `cd`
 Short for `change directory`, used to change the current directory of the client process.
