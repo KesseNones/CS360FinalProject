@@ -51,6 +51,15 @@ Used by typing:
 `rcd [RELATIVE_OR_ABSOLUTE_DIR]`
 which changes the server process' directory to `RELATIVE_OR_ABSOLUTE_DIR`.
 
+##### put
+Usage:
+```
+put [FILE_PATH]
+```
+Where `FILE_PATH` is a path to a file relative to the client process that will be written 
+to the current working directory of the server process.
+Basically, copies file from client to server.
+
 #### Client
 
 ##### cd
@@ -58,3 +67,12 @@ Short for `change directory`, used to change the current directory of the client
 Used by typing:
 `cd [RELATIVE_OR_ABSOLUTE_DIR]`
 which changes the client process' directory to `RELATIVE_OR_ABSOLUTE_DIR`.
+
+##### get
+Usage:
+```
+get [FILE_PATH]
+```
+Where `FILE_PATH` is relative to the server end. When given a valid path, creates a file in the current directory 
+of the client and copies the data of the file in the server path over, effectively copying the file from the directory
+relative to the server process to the current working directory of the given client process.
